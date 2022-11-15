@@ -8,14 +8,36 @@
 
 /* Begin PBXFileReference section */
 		2992F1092924024900A91B2A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2992F10A2924035600A91B2A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2992F10B292403AB00A91B2A /* library.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = library.properties; sourceTree = "<group>"; };
+		2992F10C292403FD00A91B2A /* keywords.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
+		2992F10E2924049E00A91B2A /* NGCustomDataStorage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGCustomDataStorage.cpp; sourceTree = "<group>"; };
+		2992F10F2924049E00A91B2A /* NGCustomDataStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGCustomDataStorage.h; sourceTree = "<group>"; };
+		2992F111292404ED00A91B2A /* NGSDDataStorage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGSDDataStorage.cpp; sourceTree = "<group>"; };
+		2992F112292404ED00A91B2A /* NGSDDataStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGSDDataStorage.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		2992F1022923FE6100A91B2A = {
 			isa = PBXGroup;
 			children = (
+				2992F10C292403FD00A91B2A /* keywords.txt */,
+				2992F10B292403AB00A91B2A /* library.properties */,
+				2992F10A2924035600A91B2A /* LICENSE */,
 				2992F1092924024900A91B2A /* README.md */,
+				2992F10D2924044C00A91B2A /* src */,
 			);
+			sourceTree = "<group>";
+		};
+		2992F10D2924044C00A91B2A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2992F10F2924049E00A91B2A /* NGCustomDataStorage.h */,
+				2992F10E2924049E00A91B2A /* NGCustomDataStorage.cpp */,
+				2992F112292404ED00A91B2A /* NGSDDataStorage.h */,
+				2992F111292404ED00A91B2A /* NGSDDataStorage.cpp */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
