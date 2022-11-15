@@ -15,14 +15,16 @@
 		2992F10F2924049E00A91B2A /* NGCustomDataStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGCustomDataStorage.h; sourceTree = "<group>"; };
 		2992F111292404ED00A91B2A /* NGSDDataStorage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGSDDataStorage.cpp; sourceTree = "<group>"; };
 		2992F112292404ED00A91B2A /* NGSDDataStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGSDDataStorage.h; sourceTree = "<group>"; };
-		2992F1142924072600A91B2A /* SDCard.ino */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDCard.ino; sourceTree = "<group>"; };
+		2992F1142924072600A91B2A /* SDCard.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = SDCard.ino; sourceTree = "<group>"; };
 		2992F117292407D700A91B2A /* SDDataStorage.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = SDDataStorage.ino; sourceTree = "<group>"; };
+		2992F11A2924095000A91B2A /* ToDo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		2992F1022923FE6100A91B2A = {
 			isa = PBXGroup;
 			children = (
+				2992F1192924092400A91B2A /* docs */,
 				2992F10C292403FD00A91B2A /* keywords.txt */,
 				2992F10B292403AB00A91B2A /* library.properties */,
 				2992F10A2924035600A91B2A /* LICENSE */,
@@ -66,6 +68,14 @@
 				2992F1142924072600A91B2A /* SDCard.ino */,
 			);
 			path = SDCard;
+			sourceTree = "<group>";
+		};
+		2992F1192924092400A91B2A /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				2992F11A2924095000A91B2A /* ToDo.txt */,
+			);
+			path = docs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
