@@ -5,8 +5,6 @@
 //  Created by Nils Grimmer on 13.11.22.
 //
 
-#include <SPI.h>
-#include <SD.h>
 #include "NGSDDataStorage.h"
 
 NGSDDataStorage::NGSDDataStorage() {
@@ -34,10 +32,46 @@ void NGSDDataStorage::initialize() {
     }
 }
 
-void NGSDDataStorage::open() {
-    
+void NGSDDataStorage::open(char* name) {
+    open(name, DEFDATASTORAGEOPENMODE);
+}
+
+void NGSDDataStorage::open(char* name, dataStorageOpenMode mode) {
+    if (isInitialized()) {
+        switch(mode) {
+            case dsomRead:
+                _file = SD.open(name, FILE_READ);
+                break;
+            case dsomWrite:
+                _file = SD.open(name, FILE_WRITE);
+                break;
+            case dsomTruncate:
+                _file = SD.open(name, FILE_WRITE | O_TRUNC);
+                break;
+        }
+        if (_logging) {
+            Serial.println("File opened");
+        }
+    } else if (_logging) {
+        Serial.println("SD Card not initialized");
+    }
+}
+
+bool NGSDDataStorage::isOpen() {
+    return _file;
 }
 
 void NGSDDataStorage::close() {
-    
+    if (isInitialized()) {
+        if (isOpen()) {
+            _file.close();
+            if (_logging) {
+                Serial.println("File closed");
+            }
+        } else if (_logging) {
+            Serial.println("No file open");
+        }
+    } else if (_logging) {
+        Serial.println("SD Card not initialized");
+    }
 }

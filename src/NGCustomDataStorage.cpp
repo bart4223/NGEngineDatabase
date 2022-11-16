@@ -14,3 +14,7 @@ void NGCustomDataStorage::setLogging(bool logging) {
 bool NGCustomDataStorage::getLogging() {
     return _logging;
 }
+
+bool NGCustomDataStorage::isInitialized() {
+    return _initialized;
+}

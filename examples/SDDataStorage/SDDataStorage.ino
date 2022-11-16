@@ -1,7 +1,7 @@
-#define SUPPORTSDCARD
-
 #include <NGMemoryObserver.h>
 #include <NGSDDataStorage.h>
+
+#define DELAY 3000
 
 NGSDDataStorage sdds = NGSDDataStorage();
 
@@ -13,5 +13,8 @@ void setup() {
 }
 
 void loop() {
-
+  sdds.open("test.txt");
+  observeMemory(DELAY);
+  sdds.close();
+  observeMemory(DELAY);
 }

@@ -14,6 +14,10 @@
 #include <WProgram.h>
 #endif
 
+enum dataStorageOpenMode { dsomRead, dsomWrite, dsomTruncate };
+
+#define DEFDATASTORAGEOPENMODE dsomRead
+
 class NGCustomDataStorage {
   
 protected:
@@ -25,9 +29,15 @@ public:
     
     bool getLogging();
     
+    bool isInitialized();
+    
     virtual void initialize();
     
-    virtual void open();
+    virtual void open(char* name);
+    
+    virtual void open(char* name, dataStorageOpenMode mode);
+    
+    virtual bool isOpen();
     
     virtual void close();
 };

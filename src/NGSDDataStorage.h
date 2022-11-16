@@ -14,6 +14,8 @@
 #include <WProgram.h>
 #endif
 
+#include <SPI.h>
+#include <SD.h>
 #include <NGCustomDataStorage.h>
 
 #define DEFSDCSPIN 5
@@ -22,6 +24,7 @@ class NGSDDataStorage  : public NGCustomDataStorage  {
   
 private:
     byte _pinCS;
+    File _file;
     
 protected:
     void _create(byte pinCS);
@@ -33,7 +36,11 @@ public:
     
     void initialize();
     
-    void open();
+    void open(char* name);
+    
+    void open(char* name, dataStorageOpenMode mode);
+    
+    bool isOpen();
     
     void close();
 };
