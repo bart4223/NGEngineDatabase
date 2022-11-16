@@ -50,7 +50,9 @@ void NGSDDataStorage::open(char* name, dataStorageOpenMode mode) {
                 break;
         }
         if (_logging) {
-            Serial.println("File opened");
+            char log[100];
+            sprintf(log, "File %s opened", name);
+            Serial.println(log);
         }
     } else if (_logging) {
         Serial.println("SD Card not initialized");
@@ -66,7 +68,9 @@ void NGSDDataStorage::close() {
         if (isOpen()) {
             _file.close();
             if (_logging) {
-                Serial.println("File closed");
+                char log[100];
+                sprintf(log, "File %s closed", _file.name());
+                Serial.println(log);
             }
         } else if (_logging) {
             Serial.println("No file open");
