@@ -40,6 +40,10 @@ public:
     virtual bool isOpen();
     
     virtual void close();
+    
+    virtual bool isAvailable();
+    
+    virtual int read();
 };
 
 #endif /* NGCustomDataStorage_h */

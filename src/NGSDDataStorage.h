@@ -43,6 +43,10 @@ public:
     bool isOpen();
     
     void close();
+    
+    bool isAvailable();
+    
+    int read();
 };
 
 #endif /* NGSDDataStorage_h */

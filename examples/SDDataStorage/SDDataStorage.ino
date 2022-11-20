@@ -14,6 +14,11 @@ void setup() {
 
 void loop() {
   sdds.open("test.txt");
+  Serial.println("Read file...");
+  while (sdds.isAvailable()) {
+    Serial.write(sdds.read());
+  }
+  Serial.println("done");
   observeMemory(DELAY);
   sdds.close();
   observeMemory(DELAY);

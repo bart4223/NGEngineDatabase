@@ -79,3 +79,15 @@ void NGSDDataStorage::close() {
         Serial.println("SD Card not initialized");
     }
 }
+
+bool NGSDDataStorage::isAvailable() {
+    bool res = isOpen();
+    if (res) {
+        res = _file.available();
+    }
+    return res;
+}
+
+int NGSDDataStorage::read() {
+    return _file.read();
+}
