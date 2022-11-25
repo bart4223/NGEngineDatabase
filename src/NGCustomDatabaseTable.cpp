@@ -11,6 +11,13 @@ void NGCustomDatabaseTable::_create(char* name){
     _name = name;
 }
 
+void NGCustomDatabaseTable::_raiseException(int id) {
+    char info[100];
+    _exceptionCount++;
+    sprintf(info, "Ex %d(%d)", id, _exceptionCount);
+    Serial.println(info);
+}
+
 char* NGCustomDatabaseTable::getName() {
     return _name;
 }

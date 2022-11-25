@@ -17,6 +17,7 @@
 		295A13D1292FA76A0015C5A5 /* DatabaseTable.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = DatabaseTable.ino; sourceTree = "<group>"; };
 		295A13D2292FAEA20015C5A5 /* NGExampleDatabaseTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGExampleDatabaseTable.cpp; sourceTree = "<group>"; };
 		295A13D3292FAEA20015C5A5 /* NGExampleDatabaseTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGExampleDatabaseTable.h; sourceTree = "<group>"; };
+		295A13D42930996F0015C5A5 /* NGDatabaseExceptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGDatabaseExceptions.h; sourceTree = "<group>"; };
 		2992F1092924024900A91B2A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2992F10A2924035600A91B2A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2992F10B292403AB00A91B2A /* library.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = library.properties; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 				295A13CE292FA6570015C5A5 /* NGCustomDatabaseTable.cpp */,
 				2992F10F2924049E00A91B2A /* NGCustomDataStorage.h */,
 				2992F10E2924049E00A91B2A /* NGCustomDataStorage.cpp */,
+				295A13D42930996F0015C5A5 /* NGDatabaseExceptions.h */,
 				295A13CD292A85EA0015C5A5 /* NGExampleDatabaseRecord.h */,
 				295A13CC292A85EA0015C5A5 /* NGExampleDatabaseRecord.cpp */,
 				295A13D3292FAEA20015C5A5 /* NGExampleDatabaseTable.h */,

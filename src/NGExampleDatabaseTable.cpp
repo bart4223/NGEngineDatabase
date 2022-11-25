@@ -5,6 +5,7 @@
 //  Created by Nils Grimmer on 24.11.22.
 //
 
+#include "NGDatabaseExceptions.h"
 #include "NGExampleDatabaseTable.h"
 
 NGExampleDatabaseTable::NGExampleDatabaseTable(char* name) {
@@ -23,9 +24,14 @@ void NGExampleDatabaseTable::serialize(Stream *s) {
 }
 
 NGCustomDatabaseRecord* NGExampleDatabaseTable::newRecord() {
-    _uuid.generate();
-    NGCustomDatabaseRecord* res = new NGExampleDatabaseRecord(_uuid.toCharArray());
-    _records[_recordCount] = res;
-    _recordCount++;
+    NGCustomDatabaseRecord* res = nullptr;
+    if (_recordCount < _maxRecordCount) {
+        _uuid.generate();
+        res = new NGExampleDatabaseRecord(_uuid.toCharArray());
+        _records[_recordCount] = res;
+        _recordCount++;
+    } else {
+        _raiseException(ExceptionDatabaseTooMuchRecordCount);
+    }
     return res;
 }

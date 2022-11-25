@@ -22,9 +22,11 @@ protected:
     char* _name;
     int _recordCount = 0;
     int _maxRecordCount = 0;
+    int _exceptionCount = 0;
     
     void _create(char* name);
     
+    void _raiseException(int id);
 public:
     virtual void serialize(Stream *s);
     
@@ -32,7 +34,7 @@ public:
 
     int getRecordCount();
     
-    int getMaxRecordCount();    
+    int getMaxRecordCount();
     
     virtual NGCustomDatabaseRecord* newRecord();
 };
