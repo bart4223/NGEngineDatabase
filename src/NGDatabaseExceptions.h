@@ -10,6 +10,7 @@
 
 #define ExceptionDatabaseUnknown                10000
 
-#define ExceptionDatabaseTooMuchRecordCount     10100
+#define ExceptionDatabaseTooMuchTableCount      10100
+#define ExceptionDatabaseTooMuchRecordCount     10101
 
 #endif /* NGDatabaseExceptions_h */

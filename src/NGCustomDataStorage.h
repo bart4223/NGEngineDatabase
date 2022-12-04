@@ -33,9 +33,9 @@ public:
     
     virtual void initialize();
     
-    virtual void open(char* name);
+    virtual bool open(char* name);
     
-    virtual void open(char* name, dataStorageOpenMode mode);
+    virtual bool open(char* name, dataStorageOpenMode mode);
     
     virtual bool isOpen();
     
@@ -44,6 +44,8 @@ public:
     virtual bool isAvailable();
     
     virtual int read();
+    
+    virtual Stream* getStream();
 };
 
 #endif /* NGCustomDataStorage_h */

@@ -32,11 +32,12 @@ void NGSDDataStorage::initialize() {
     }
 }
 
-void NGSDDataStorage::open(char* name) {
-    open(name, DEFDATASTORAGEOPENMODE);
+bool NGSDDataStorage::open(char* name) {
+    return open(name, DEFDATASTORAGEOPENMODE);
 }
 
-void NGSDDataStorage::open(char* name, dataStorageOpenMode mode) {
+bool NGSDDataStorage::open(char* name, dataStorageOpenMode mode) {
+    bool res = false;
     if (isInitialized()) {
         switch(mode) {
             case dsomRead:
@@ -49,14 +50,20 @@ void NGSDDataStorage::open(char* name, dataStorageOpenMode mode) {
                 _file = SD.open(name, FILE_WRITE | O_TRUNC);
                 break;
         }
+        res = isOpen();
         if (_logging) {
             char log[100];
-            sprintf(log, "File %s opened", name);
+            if (res) {
+                sprintf(log, "File %s opened", name);
+            } else {
+                sprintf(log, "File %s cant open", name);
+            }
             Serial.println(log);
         }
     } else if (_logging) {
         Serial.println("SD Card not initialized");
     }
+    return res;
 }
 
 bool NGSDDataStorage::isOpen() {
@@ -90,4 +97,8 @@ bool NGSDDataStorage::isAvailable() {
 
 int NGSDDataStorage::read() {
     return _file.read();
+}
+
+Stream* NGSDDataStorage::getStream() {
+    return &_file;
 }

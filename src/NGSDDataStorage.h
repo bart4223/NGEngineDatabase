@@ -36,9 +36,9 @@ public:
     
     void initialize();
     
-    void open(char* name);
+    bool open(char* name);
     
-    void open(char* name, dataStorageOpenMode mode);
+    bool open(char* name, dataStorageOpenMode mode);
     
     bool isOpen();
     
@@ -47,6 +47,8 @@ public:
     bool isAvailable();
     
     int read();
+    
+    Stream* getStream();
 };
 
 #endif /* NGSDDataStorage_h */
