@@ -20,6 +20,7 @@ void setup() {
   observeMemory(0);
   NGExampleDatabaseRecord *recOneOne = tabOne->newRecord();
   NGExampleDatabaseRecord *recTwoOne = tabTwo->newRecord();
+  NGExampleDatabaseRecord *recTwoTwo = tabTwo->newRecord();
   observeMemory(0);
   db.store();
   observeMemory(0);
