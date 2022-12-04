@@ -1,5 +1,4 @@
 -Common
 -Database
   -NGDatabase
-    -Store
     -Load
