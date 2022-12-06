@@ -30,6 +30,8 @@ protected:
 public:
     virtual void serialize(Stream *s);
     
+    virtual void deserialize(char* line);
+    
     char* getName();
 
     int getRecordCount();

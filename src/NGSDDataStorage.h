@@ -48,6 +48,8 @@ public:
     
     int read();
     
+    String readLine();
+    
     Stream* getStream();
 };
 

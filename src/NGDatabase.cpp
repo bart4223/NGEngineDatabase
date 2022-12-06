@@ -29,6 +29,10 @@ void NGDatabase::_raiseException(int id) {
 }
 
 void NGDatabase::initialize() {
+    initialize(true);
+}
+
+void NGDatabase::initialize(bool withload) {
     if (_logging) {
         Serial.println("DB init...");
     }
@@ -36,7 +40,9 @@ void NGDatabase::initialize() {
     if (_logging) {
         Serial.println("DB initialized");
     }
-    load();
+    if (withload) {
+        load();
+    }
 }
 
 void NGDatabase::setLogging(bool logging) {
@@ -69,6 +75,23 @@ void NGDatabase::registerTable(char* dataStorageName, NGCustomDatabaseTable* tab
 
 void NGDatabase::load() {
     for (int i = 0; i < _tableCount; i++) {
+        char name[100];
+        if (_location == "") {
+            sprintf(name, "%s", _tables[i].dataStorageName);
+        } else {
+            sprintf(name, "%s/%s", _location, _tables[i].dataStorageName);
+        }
+        if (_logging) {
+            char log[100];
+            sprintf(log, "Load table %s...", _tables[i].table->getName());
+            Serial.println(log);
+        }
+        _storage->open(name, dsomRead);
+        while (_storage->isAvailable()) {
+            String line = _storage->readLine();
+            _tables[i].table->deserialize(line.c_str());
+        }
+        _storage->close();
         _tables[i].loaded = millis();
     }
     if (_logging) {

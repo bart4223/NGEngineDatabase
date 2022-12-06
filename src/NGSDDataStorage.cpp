@@ -99,6 +99,15 @@ int NGSDDataStorage::read() {
     return _file.read();
 }
 
+String NGSDDataStorage::readLine() {
+    String res;
+    if (isAvailable()) {
+        res = _file.readStringUntil('\n');
+        res.trim();
+    }
+    return res;
+}
+
 Stream* NGSDDataStorage::getStream() {
     return &_file;
 }

@@ -50,6 +50,8 @@ public:
     
     void initialize();
     
+    void initialize(bool withload);
+    
     void setLogging(bool logging);
     
     bool getLogging();

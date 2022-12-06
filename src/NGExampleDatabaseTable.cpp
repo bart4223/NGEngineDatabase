@@ -23,6 +23,17 @@ void NGExampleDatabaseTable::serialize(Stream *s) {
     }
 }
 
+void NGExampleDatabaseTable::deserialize(char* line) {
+    if (_recordCount < _maxRecordCount) {
+        NGExampleDatabaseRecord* rec = new NGExampleDatabaseRecord();
+        _records[_recordCount] = rec;
+        _recordCount++;
+        rec->deserialize(line);
+    } else {
+        _raiseException(ExceptionDatabaseTooMuchRecordCount);
+    }
+}
+
 NGCustomDatabaseRecord* NGExampleDatabaseTable::newRecord() {
     NGCustomDatabaseRecord* res = nullptr;
     if (_recordCount < _maxRecordCount) {

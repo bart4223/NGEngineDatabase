@@ -33,6 +33,8 @@ public:
     
     void serialize(Stream *s);
     
+    void deserialize(char* line);
+    
     NGCustomDatabaseRecord* newRecord();
 };
 

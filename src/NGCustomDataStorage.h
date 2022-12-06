@@ -45,6 +45,8 @@ public:
     
     virtual int read();
     
+    virtual String readLine();
+    
     virtual Stream* getStream();
 };
 

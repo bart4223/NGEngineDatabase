@@ -15,6 +15,7 @@
 #endif
 
 #define DBRECORDPRINTSEPARATOR s->print(_separator)
+#define DBEMPTYPKEY ""
 
 class NGCustomDatabaseRecord {
 
@@ -28,6 +29,8 @@ protected:
     
 public:
     void serialize(Stream *s);
+    
+    void deserialize(char* line);
 };
 
 #endif /* NGCustomDatabaseRecord_h */

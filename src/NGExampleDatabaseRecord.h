@@ -26,9 +26,13 @@ protected:
     void _create(char* pkey);
     
 public:
+    NGExampleDatabaseRecord();
+    
     NGExampleDatabaseRecord(char* pkey);
     
     void serialize(Stream *s);
+    
+    void deserialize(char* line);
     
     void setField1(int value);
     
