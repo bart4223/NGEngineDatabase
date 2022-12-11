@@ -75,19 +75,12 @@
 		2992F10D2924044C00A91B2A /* src */ = {
 			isa = PBXGroup;
 			children = (
-				295A13C9292A83920015C5A5 /* NGCustomDatabaseRecord.h */,
-				295A13C8292A83920015C5A5 /* NGCustomDatabaseRecord.cpp */,
-				295A13CF292FA6570015C5A5 /* NGCustomDatabaseTable.h */,
-				295A13CE292FA6570015C5A5 /* NGCustomDatabaseTable.cpp */,
+				29A6A6CF294605D60018F4F3 /* common */,
+				29A6A6CE294605B20018F4F3 /* specs */,
 				2992F10F2924049E00A91B2A /* NGCustomDataStorage.h */,
 				2992F10E2924049E00A91B2A /* NGCustomDataStorage.cpp */,
 				295A13D62933A2C40015C5A5 /* NGDatabase.h */,
 				295A13D52933A2C40015C5A5 /* NGDatabase.cpp */,
-				295A13D42930996F0015C5A5 /* NGDatabaseExceptions.h */,
-				295A13CD292A85EA0015C5A5 /* NGExampleDatabaseRecord.h */,
-				295A13CC292A85EA0015C5A5 /* NGExampleDatabaseRecord.cpp */,
-				295A13D3292FAEA20015C5A5 /* NGExampleDatabaseTable.h */,
-				295A13D2292FAEA20015C5A5 /* NGExampleDatabaseTable.cpp */,
 				2992F112292404ED00A91B2A /* NGSDDataStorage.h */,
 				2992F111292404ED00A91B2A /* NGSDDataStorage.cpp */,
 			);
@@ -128,6 +121,29 @@
 				2992F11A2924095000A91B2A /* ToDo.txt */,
 			);
 			path = docs;
+			sourceTree = "<group>";
+		};
+		29A6A6CE294605B20018F4F3 /* specs */ = {
+			isa = PBXGroup;
+			children = (
+				295A13C9292A83920015C5A5 /* NGCustomDatabaseRecord.h */,
+				295A13C8292A83920015C5A5 /* NGCustomDatabaseRecord.cpp */,
+				295A13CF292FA6570015C5A5 /* NGCustomDatabaseTable.h */,
+				295A13CE292FA6570015C5A5 /* NGCustomDatabaseTable.cpp */,
+				295A13CD292A85EA0015C5A5 /* NGExampleDatabaseRecord.h */,
+				295A13CC292A85EA0015C5A5 /* NGExampleDatabaseRecord.cpp */,
+				295A13D3292FAEA20015C5A5 /* NGExampleDatabaseTable.h */,
+				295A13D2292FAEA20015C5A5 /* NGExampleDatabaseTable.cpp */,
+			);
+			path = specs;
+			sourceTree = "<group>";
+		};
+		29A6A6CF294605D60018F4F3 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				295A13D42930996F0015C5A5 /* NGDatabaseExceptions.h */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
