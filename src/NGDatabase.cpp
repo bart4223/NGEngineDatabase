@@ -112,6 +112,9 @@ void NGDatabase::store() {
             sprintf(log, "Store table %s...", _tables[i].table->getName());
             Serial.println(log);
         }
+        if (!_storage->exists(_location)) {
+            _storage->mkdir(_location);
+        }
         _storage->open(name, dsomTruncate);
         _tables[i].table->serialize(_storage->getStream());
         _storage->close();

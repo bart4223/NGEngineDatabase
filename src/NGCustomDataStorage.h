@@ -48,6 +48,10 @@ public:
     virtual String readLine();
     
     virtual Stream* getStream();
+    
+    virtual bool exists(char* name);
+    
+    virtual bool mkdir(char* name);
 };
 
 #endif /* NGCustomDataStorage_h */

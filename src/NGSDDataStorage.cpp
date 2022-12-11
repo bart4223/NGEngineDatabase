@@ -111,3 +111,11 @@ String NGSDDataStorage::readLine() {
 Stream* NGSDDataStorage::getStream() {
     return &_file;
 }
+
+bool NGSDDataStorage::exists(char* name) {
+    return SD.exists(name) == 1;
+}
+
+bool NGSDDataStorage::mkdir(char* name) {
+    return SD.mkdir(name) == 1;
+}

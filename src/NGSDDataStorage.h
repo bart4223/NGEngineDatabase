@@ -51,6 +51,10 @@ public:
     String readLine();
     
     Stream* getStream();
+    
+    bool exists(char* name);
+    
+    bool mkdir(char* name);
 };
 
 #endif /* NGSDDataStorage_h */

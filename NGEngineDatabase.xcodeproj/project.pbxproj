@@ -32,6 +32,11 @@
 		2992F1142924072600A91B2A /* SDCard.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = SDCard.ino; sourceTree = "<group>"; };
 		2992F117292407D700A91B2A /* SDDataStorage.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = SDDataStorage.ino; sourceTree = "<group>"; };
 		2992F11A2924095000A91B2A /* ToDo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
+		29A6A6D1294606A40018F4F3 /* NGCustomDatabaseSchema.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGCustomDatabaseSchema.cpp; sourceTree = "<group>"; };
+		29A6A6D2294606A40018F4F3 /* NGCustomDatabaseSchema.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGCustomDatabaseSchema.h; sourceTree = "<group>"; };
+		29A6A6D4294606F00018F4F3 /* Schema.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = Schema.ino; sourceTree = "<group>"; };
+		29A6A6D5294616D00018F4F3 /* NGExampleDatabaseSchema.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGExampleDatabaseSchema.cpp; sourceTree = "<group>"; };
+		29A6A6D6294616D00018F4F3 /* NGExampleDatabaseSchema.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGExampleDatabaseSchema.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -75,8 +80,9 @@
 		2992F10D2924044C00A91B2A /* src */ = {
 			isa = PBXGroup;
 			children = (
-				29A6A6CF294605D60018F4F3 /* common */,
-				29A6A6CE294605B20018F4F3 /* specs */,
+				29A6A6D7294618D50018F4F3 /* common */,
+				29A6A6D8294618FC0018F4F3 /* schemas */,
+				29A6A6DB2946192E0018F4F3 /* specs */,
 				2992F10F2924049E00A91B2A /* NGCustomDataStorage.h */,
 				2992F10E2924049E00A91B2A /* NGCustomDataStorage.cpp */,
 				295A13D62933A2C40015C5A5 /* NGDatabase.h */,
@@ -90,6 +96,7 @@
 		2992F113292406CC00A91B2A /* examples */ = {
 			isa = PBXGroup;
 			children = (
+				29A6A6D3294606D80018F4F3 /* Schema */,
 				295A13D72933A3BB0015C5A5 /* Database */,
 				295A13CA292A83F70015C5A5 /* DatabaseRecord */,
 				295A13D0292FA7450015C5A5 /* DatabaseTable */,
@@ -123,7 +130,34 @@
 			path = docs;
 			sourceTree = "<group>";
 		};
-		29A6A6CE294605B20018F4F3 /* specs */ = {
+		29A6A6D3294606D80018F4F3 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				29A6A6D4294606F00018F4F3 /* Schema.ino */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
+		29A6A6D7294618D50018F4F3 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				295A13D42930996F0015C5A5 /* NGDatabaseExceptions.h */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		29A6A6D8294618FC0018F4F3 /* schemas */ = {
+			isa = PBXGroup;
+			children = (
+				29A6A6D2294606A40018F4F3 /* NGCustomDatabaseSchema.h */,
+				29A6A6D1294606A40018F4F3 /* NGCustomDatabaseSchema.cpp */,
+				29A6A6D6294616D00018F4F3 /* NGExampleDatabaseSchema.h */,
+				29A6A6D5294616D00018F4F3 /* NGExampleDatabaseSchema.cpp */,
+			);
+			name = schemas;
+			sourceTree = "<group>";
+		};
+		29A6A6DB2946192E0018F4F3 /* specs */ = {
 			isa = PBXGroup;
 			children = (
 				295A13C9292A83920015C5A5 /* NGCustomDatabaseRecord.h */,
@@ -135,15 +169,7 @@
 				295A13D3292FAEA20015C5A5 /* NGExampleDatabaseTable.h */,
 				295A13D2292FAEA20015C5A5 /* NGExampleDatabaseTable.cpp */,
 			);
-			path = specs;
-			sourceTree = "<group>";
-		};
-		29A6A6CF294605D60018F4F3 /* common */ = {
-			isa = PBXGroup;
-			children = (
-				295A13D42930996F0015C5A5 /* NGDatabaseExceptions.h */,
-			);
-			path = common;
+			name = specs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
