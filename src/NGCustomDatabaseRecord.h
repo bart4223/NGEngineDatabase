@@ -8,11 +8,7 @@
 #ifndef NGCustomDatabaseRecord_h
 #define NGCustomDatabaseRecord_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
 
 #define DBRECORDPRINTSEPARATOR s->print(_separator)
 #define DBEMPTYPKEY ""

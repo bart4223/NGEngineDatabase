@@ -8,11 +8,7 @@
 #ifndef NGCustomDataStorage_h
 #define NGCustomDataStorage_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
 
 enum dataStorageOpenMode { dsomRead, dsomWrite, dsomTruncate };
 

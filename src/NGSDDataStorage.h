@@ -8,12 +8,7 @@
 #ifndef NGSDDataStorage_h
 #define NGSDDataStorage_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
-
 #include <SPI.h>
 #include <SD.h>
 #include <NGCustomDataStorage.h>

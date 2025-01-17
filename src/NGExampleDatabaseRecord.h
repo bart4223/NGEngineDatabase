@@ -8,12 +8,7 @@
 #ifndef NGExampleDatabaseRecord_h
 #define NGExampleDatabaseRecord_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
-
 #include <NGCustomDatabaseRecord.h>
 
 class NGExampleDatabaseRecord : public NGCustomDatabaseRecord {

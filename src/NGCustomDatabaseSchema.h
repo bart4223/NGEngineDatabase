@@ -8,12 +8,7 @@
 #ifndef NGCustomDatabaseSchema_h
 #define NGCustomDatabaseSchema_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
-
 #include <NGDatabase.h>
 
 class NGCustomDatabaseSchema {

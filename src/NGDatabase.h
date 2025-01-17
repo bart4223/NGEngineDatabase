@@ -8,12 +8,7 @@
 #ifndef NGDatabase_h
 #define NGDatabase_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
-
 #include <NGCustomDataStorage.h>
 #include <NGCustomDatabaseTable.h>
 
